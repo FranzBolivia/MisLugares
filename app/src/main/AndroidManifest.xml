@@ -13,7 +13,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".VistaLugarActivity" android:label="VistaLugar"
-            android:theme="@style/AppTheme.NoActionBar">
+           >
 
         </activity>
     </application>

@@ -1,7 +1,12 @@
 package com.fva.mislugares;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -66,4 +71,50 @@ public class VistaLugarActivity extends AppCompatActivity {
                     }
                 });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.vista_lugar, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.accion_compartir:
+                return true;
+            case R.id.accion_llegar:
+                return true;
+            case R.id.accion_editar:
+                return true;
+            case R.id.accion_borrar:
+
+                borrarLugar(null,(int) id);
+                //MainActivity.lugares.borrar((int) id);
+                //finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void borrarLugar (View view, final Integer id) {
+
+    new AlertDialog.Builder(this)
+            .setTitle("Confirmar Eliminacion")
+            .setMessage("Esta seguro que desea eliminar este lugar??")
+            //.setView(entrada)
+            .setPositiveButton("Confirmar", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    MainActivity.lugares.borrar((int) id);
+                    finish();
+                    return ;
+                    //long id = Long.parseLong(entrada.getText().toString());
+                    //Intent i = new Intent(MainActivity.this, VistaLugarActivity.class);
+                    //i.putExtra("id", id);
+                    //startActivity(i);
+                }})
+            .setNegativeButton("Cancelar", null)
+            .show();
+
+}
 }
