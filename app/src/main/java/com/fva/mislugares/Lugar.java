@@ -1,5 +1,7 @@
 package com.fva.mislugares;
 
+import android.widget.TextView;
+
 /**
  * Created by DTIC-Dir on 28/09/2017.
  */
@@ -33,7 +35,7 @@ public class Lugar {
         this.foto = foto;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(Integer telefono) {
         this.telefono = telefono;
     }
 
