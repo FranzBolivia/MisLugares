@@ -1,58 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
+<android.support.v7.widget.RecyclerView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recycler_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.fva.mislugares.MainActivity" tools:showIn="@layout/activity_main">
-
-
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        android:padding="32dp">
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="Mostrar Lugares"
-            app:layout_constraintBottom_toTopOf="@+id/button3"
-
-             />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-
-            android:text="Preferencias"
-            app:layout_constraintBottom_toTopOf="@+id/button4"
-             />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-
-            android:text="Acerca de"
-            app:layout_constraintBottom_toTopOf="@+id/button5"
-            />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-
-            android:text="Salir"
-            app:layout_constraintBottom_toBottomOf="parent"
-             />
-    </android.support.constraint.ConstraintLayout>
-
-</android.support.v4.widget.NestedScrollView>
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    />
